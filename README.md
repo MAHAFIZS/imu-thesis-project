@@ -1,42 +1,42 @@
-# IMU Thesis Project – MATLAB-Based IMU Simulation and Compensation
+# IMU Thesis Project – Bias and Noise Characterization with MATLAB
 
-This project is part of my Master's thesis on **gesture-based control of robotic systems** using inertial sensor data. The focus is on simulating and compensating **bias** and **noise** in real-world IMU (Inertial Measurement Unit) signals using MATLAB.
+This repository contains MATLAB code and real IMU data for analyzing and compensating inertial sensor bias and noise. The project is part of my Master's thesis at FAU Erlangen-Nürnberg, focusing on gesture-based teleoperation of a Franka Emika Panda robot.
 
-## 🎯 Objective
+## 📁 Folder Structure
+/data
+imu_hand.txt - IMU data while attached to hand (motion + noise)
+imu_table.txt - IMU data while resting on table (baseline reference)
 
-To analyze and simulate the behavior of MEMS-based IMU signals and develop compensation strategies for:
-- Sensor bias (offset)
-- Sensor noise (standard deviation)
+## 📊 What’s Inside
+- **Bias & Noise Estimation**: Compute mean (bias) and standard deviation (noise) for each axis (ax, ay, az).
+- **Sensor Stability Comparison**: Visual and statistical comparison between static (table) and dynamic (hand) placements.
+- **MATLAB Code**: Modular scripts for loading, analyzing, and plotting IMU signal quality.
+- **Signal Compensation**: Optional compensation applied for gesture recognition tasks.
 
-The compensated data can improve downstream processing such as gesture recognition or orientation estimation.
+## 🔬 Example Output
+--- Hand ---
+Bias : [-2.14 1.89 1.35]
+Noise : [ 1.06 0.93 0.66]
 
-## 📂 Contents
+--- Table ---
+Bias : [ 3.06 -0.34 0.58]
+Noise : [ 1.23 0.34 0.42]
 
-- `imu_simulation_compensation.m`: Main script for simulating gesture motion, applying real-world IMU bias/noise, and compensating them.
-- `imu_logger_log.txt`: Sample real IMU data (rest state) used to extract offset and noise.
-- Example plots before and after compensation.
-- Real data from Muovi sensor used in simulation.
+## 📌 Relevance
+The results from this analysis support:
+- Filtering design for gesture-based robot control
+- Sensor calibration logic in embedded systems
+- Robust IMU signal processing for human-machine interfaces
 
-## 🧠 Workflow
+## 🛠 Technologies Used
+- MATLAB R2023a
+- MEMS-based IMU (Muovi Sensor)
+- Data collected from real-time hand and table experiments
 
-1. Load raw IMU data (from sensor at rest).
-2. Calculate:
-   - Accelerometer bias (mean)
-   - Noise (standard deviation)
-3. Simulate gesture-like motion using sine/cosine functions.
-4. Add real sensor bias and noise to generate "measured" data.
-5. Compensate bias and evaluate noise after compensation.
-6. Plot results for visualization.
+## 🔗 Project Scope
+This work is part of a larger thesis project on **gesture-based control interfaces** for robot teleoperation using sensor fusion (EMG + IMU).
 
-## 📊 Example Output
-
-![Simulation Result](./simulation_plot_example.png)
-
-```matlab
---- Real IMU Statistics ---
-Bias (rest state):       [-1.73619 1.52775 1.07826]
-Noise STD (rest state):  [1.27754 1.11536 0.78765]
-
---- Simulated Gesture Data ---
-Bias After Compensation: [0.09891 -0.04806 0.04858]
-Noise STD After:         [1.48659 1.26710 0.79436]
+---
+git add README.md
+git commit -m "Add detailed README for IMU thesis project"
+git push
