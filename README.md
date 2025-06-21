@@ -1,4 +1,4 @@
-# IMU Thesis Project – Bias and Noise Characterization with MATLAB
+# IMU Thesis Project One Part – Bias and Noise Characterization with MATLAB
 
 This repository contains MATLAB code and real IMU data for analyzing and compensating inertial sensor bias and noise. The project is part of my Master's thesis at FAU Erlangen-Nürnberg, focusing on gesture-based teleoperation of a Franka Emika Panda robot.
 
