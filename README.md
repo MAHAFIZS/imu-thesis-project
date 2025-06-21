@@ -7,9 +7,11 @@ This repository contains MATLAB code and real IMU data for analyzing and compens
 imu_hand.txt - IMU data while attached to hand (motion + noise)
 imu_table.txt - IMU data while resting on table (baseline reference)
 /plots
-histogram_x_axis.png
-histogram_y_axis.png
-histogram_z_axis.png
+AllanVariance_Zaxis.png	Allan Deviation for Z-axis (Table)
+histogram_x_axis.png	Histogram: Accel X – Hand vs Table
+histogram_y_axis.png	Histogram: Accel Y – Hand vs Table
+histogram_z_axis.png	Histogram: Accel Z – Hand vs Table
+rollpitch.png	Complementary filter (Pitch & Roll)
 ## 📊 What’s Inside
 - **Bias & Noise Estimation**: Compute mean (bias) and standard deviation (noise) for each axis (ax, ay, az).
 - **Sensor Stability Comparison**: Visual and statistical comparison between static (table) and dynamic (hand) placements.
