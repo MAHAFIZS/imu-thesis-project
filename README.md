@@ -32,7 +32,7 @@ The results from this analysis support:
 - Robust IMU signal processing for human-machine interfaces
 
 ## 🛠 Technologies Used
-- MATLAB R2023a
+- MATLAB R2018b
 - MEMS-based IMU (Muovi Sensor)
 - Data collected from real-time hand and table experiments
 
